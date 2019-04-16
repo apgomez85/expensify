@@ -8,7 +8,6 @@ import {
   setStartDate,
   setEndDate
 } from '../actions/filters';
-import { start } from 'repl';
 
 export class ExpenseListFilters extends React.Component {
   state = {
