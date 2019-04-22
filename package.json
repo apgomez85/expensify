@@ -17,6 +17,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "enzyme-to-json": "^3.3.5",
+    "express": "^4.16.4",
     "jest": "^23.6.0",
     "live-server": "^1.2.1",
     "mini-css-extract-plugin": "^0.6.0",
@@ -45,10 +46,12 @@
   },
   "scripts": {
     "test": "jest --config=jest.config.json",
-    "start": "live-server public/",
+    "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server"
+    "dev-server": "webpack-dev-server",
+    "start": "node server/server.js",
+    "heroku-postbuild": "npm run build:prod"
   },
   "author": "Adrian Gomez",
   "license": "ISC"
