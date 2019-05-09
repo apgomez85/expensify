@@ -1,14 +1,17 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ExpenseSummary from '../../components/ExpensesSummary';
-import expenses from '../fixtures/expenses';
+import { ExpensesSummary } from '../../components/ExpensesSummary';
 
-test('should render ExpenseSummary with one expense', () => {
-  const wrapper = shallow(<ExpenseSummary expenses={[expenses[0]]} />);
+test('should render ExpensesSummary with one expense', () => {
+  const wrapper = shallow(
+    <ExpensesSummary expenseCount={1} expensesTotal={235} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should render ExpenseSummary with multiple expenses', () => {
-  const wrapper = shallow(<ExpenseSummary expenses={expenses} />);
+test('should render ExpensesSummary with multiple expenses', () => {
+  const wrapper = shallow(
+    <ExpensesSummary expenseCount={23} expensesTotal={2168465431} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
