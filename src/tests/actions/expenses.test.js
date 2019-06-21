@@ -133,7 +133,7 @@ test('should remove expense from firebase', done => {
   const id = expenses[2].id;
 
   store
-    .dispatch(startRemoveExpense({ id }))
+    .dispatch(startRemoveExpense(id))
     .then(() => {
       const actions = store.getActions();
       expect(actions[0]).toEqual({
